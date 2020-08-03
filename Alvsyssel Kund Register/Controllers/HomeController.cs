@@ -15,14 +15,14 @@ namespace Alvsyssel_Kund_Register.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Älvsyssel.";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Kontakt us.";
 
             return View();
         }

@@ -1,0 +1,87 @@
+﻿@model IEnumerable<Alvsyssel_Kund_Register.Models.KundRegister>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Kundregister</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Kund_Fornamn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Kund_Efternamn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Produkt_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Datum_kop)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Kund_telefon_nr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Kund_e_mail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Kund_adress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Kund_post_nr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Kund_region)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Medgivande_att_bli_kontaktad)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kund_Fornamn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kund_Efternamn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Produkt_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Datum_kop)
+        </td>>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kund_telefon_nr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kund_e_mail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kund_adress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kund_post_nr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kund_region)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Medgivande_att_bli_kontaktad)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Kund_Id }) <br />
+            @Html.ActionLink("Details", "Details", new { id=item.Kund_Id }) <br />
+            @Html.ActionLink("Delete", "Delete", new { id=item.Kund_Id })
+        </td>
+    </tr>
+}
+
+</table>

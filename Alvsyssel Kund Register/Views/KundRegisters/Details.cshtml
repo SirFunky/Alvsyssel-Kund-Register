@@ -1,0 +1,154 @@
+﻿@model Alvsyssel_Kund_Register.Models.KundRegister
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>KundRegister</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Kund_Fornamn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kund_Fornamn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kund_Efternamn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kund_Efternamn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Produkt_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Produkt_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Datum_kop)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Datum_kop)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Datum_installation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Datum_installation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kund_telefon_nr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kund_telefon_nr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kund_e_mail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kund_e_mail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kund_adress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kund_adress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kund_post_nr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kund_post_nr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kund_region)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kund_region)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Medgivande_att_bli_kontaktad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Medgivande_att_bli_kontaktad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Admin_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Admin_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Senast_andrad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Senast_andrad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Order_nr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Order_nr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Produkt_typ)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Produkt_typ)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GDPR__Medgivande)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GDPR__Medgivande)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.C30_Dagar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.C30_Dagar)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Kund_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
