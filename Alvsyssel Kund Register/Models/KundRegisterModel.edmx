@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Alias="Self" Namespace="Database1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012">
+        <EntityType Name="KundRegister">
+          <Key>
+            <PropertyRef Name="Kund_Id" />
+          </Key>
+          <Property Name="Kund_Id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+          <Property Name="Kund_Fornamn" MaxLength="50" Type="varchar" />
+          <Property Name="Kund_Efternamn" MaxLength="50" Type="varchar" />
+          <Property Name="Produkt_id" Type="int" />
+          <Property Name="Datum_kop" Type="date" />
+          <Property Name="Datum_installation" Type="date" />
+          <Property Name="Kund_telefon_nr" Type="int" />
+          <Property Name="Kund_e-mail" MaxLength="50" Type="varchar" />
+          <Property Name="Kund_adress" MaxLength="50" Type="varchar" />
+          <Property Name="Kund_post_nr" Type="int" />
+          <Property Name="Kund_region" MaxLength="50" Type="varchar" />
+          <Property Name="Medgivande_att_bli_kontaktad" MaxLength="10" Type="varbinary" />
+          <Property Name="Admin_id" Type="int" />
+          <Property Name="Senast_andrad" Type="date" />
+          <Property Name="Order_nr" Type="int" />
+          <Property Name="Produkt_typ" MaxLength="50" Type="varchar" />
+          <Property Name="GDPR_ Medgivande" MaxLength="10" Type="nchar" />
+          <Property Name="30_Dagar" MaxLength="10" Type="nchar" />
+        </EntityType>
+        <EntityContainer Name="Database1ModelStoreContainer">
+          <EntitySet Name="KundRegister" EntityType="Self.KundRegister" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Database1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="KundRegister">
+          <Key>
+            <PropertyRef Name="Kund_Id" />
+          </Key>
+          <Property Name="Kund_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Kund_Fornamn" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Kund_Efternamn" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Produkt_id" Type="Int32" />
+          <Property Name="Datum_kop" Type="DateTime" Precision="0" />
+          <Property Name="Datum_installation" Type="DateTime" Precision="0" />
+          <Property Name="Kund_telefon_nr" Type="Int32" />
+          <Property Name="Kund_e_mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Kund_adress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Kund_post_nr" Type="Int32" />
+          <Property Name="Kund_region" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Medgivande_att_bli_kontaktad" Type="Binary" MaxLength="10" FixedLength="false" />
+          <Property Name="Admin_id" Type="Int32" />
+          <Property Name="Senast_andrad" Type="DateTime" Precision="0" />
+          <Property Name="Order_nr" Type="Int32" />
+          <Property Name="Produkt_typ" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="GDPR__Medgivande" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="C30_Dagar" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="Database1Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="KundRegisters" EntityType="Self.KundRegister" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Database1ModelStoreContainer" CdmEntityContainer="Database1Entities">
+          <EntitySetMapping Name="KundRegisters">
+            <EntityTypeMapping TypeName="Database1Model.KundRegister">
+              <MappingFragment StoreEntitySet="KundRegister">
+                <ScalarProperty Name="Kund_Id" ColumnName="Kund_Id" />
+                <ScalarProperty Name="Kund_Fornamn" ColumnName="Kund_Fornamn" />
+                <ScalarProperty Name="Kund_Efternamn" ColumnName="Kund_Efternamn" />
+                <ScalarProperty Name="Produkt_id" ColumnName="Produkt_id" />
+                <ScalarProperty Name="Datum_kop" ColumnName="Datum_kop" />
+                <ScalarProperty Name="Datum_installation" ColumnName="Datum_installation" />
+                <ScalarProperty Name="Kund_telefon_nr" ColumnName="Kund_telefon_nr" />
+                <ScalarProperty Name="Kund_e_mail" ColumnName="Kund_e-mail" />
+                <ScalarProperty Name="Kund_adress" ColumnName="Kund_adress" />
+                <ScalarProperty Name="Kund_post_nr" ColumnName="Kund_post_nr" />
+                <ScalarProperty Name="Kund_region" ColumnName="Kund_region" />
+                <ScalarProperty Name="Medgivande_att_bli_kontaktad" ColumnName="Medgivande_att_bli_kontaktad" />
+                <ScalarProperty Name="Admin_id" ColumnName="Admin_id" />
+                <ScalarProperty Name="Senast_andrad" ColumnName="Senast_andrad" />
+                <ScalarProperty Name="Order_nr" ColumnName="Order_nr" />
+                <ScalarProperty Name="Produkt_typ" ColumnName="Produkt_typ" />
+                <ScalarProperty Name="GDPR__Medgivande" ColumnName="GDPR_ Medgivande" />
+                <ScalarProperty Name="C30_Dagar" ColumnName="30_Dagar" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
