@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Kundregister</h2>
+<h2>Index</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -40,7 +40,7 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Medgivande_att_bli_kontaktad)
-        </th>
+        </th>        
         <th></th>
     </tr>
 
@@ -57,7 +57,7 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Datum_kop)
-        </td>>
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.Kund_telefon_nr)
         </td>
@@ -75,10 +75,10 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Medgivande_att_bli_kontaktad)
-        </td>
+        </td>        
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Kund_Id }) <br />
-            @Html.ActionLink("Details", "Details", new { id=item.Kund_Id }) <br />
+            @Html.ActionLink("Edit", "Edit", new { id=item.Kund_Id })<br />
+            @Html.ActionLink("Details", "Details", new { id=item.Kund_Id })<br />
             @Html.ActionLink("Delete", "Delete", new { id=item.Kund_Id })
         </td>
     </tr>

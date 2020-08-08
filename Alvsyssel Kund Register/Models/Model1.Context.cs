@@ -13,10 +13,10 @@ namespace Alvsyssel_Kund_Register.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Database1Entities : DbContext
+    public partial class KundregisterV2 : DbContext
     {
-        public Database1Entities()
-            : base("name=Database1Entities")
+        public KundregisterV2()
+            : base("name=KundregisterV2")
         {
         }
     

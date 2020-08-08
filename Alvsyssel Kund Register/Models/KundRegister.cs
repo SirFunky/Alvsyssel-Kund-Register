@@ -20,17 +20,20 @@ namespace Alvsyssel_Kund_Register.Models
         public Nullable<int> Produkt_id { get; set; }
         public Nullable<System.DateTime> Datum_kop { get; set; }
         public Nullable<System.DateTime> Datum_installation { get; set; }
-        public Nullable<int> Kund_telefon_nr { get; set; }
+        public string Kund_telefon_nr { get; set; }
         public string Kund_e_mail { get; set; }
         public string Kund_adress { get; set; }
         public Nullable<int> Kund_post_nr { get; set; }
         public string Kund_region { get; set; }
-        public byte[] Medgivande_att_bli_kontaktad { get; set; }
+        public string Medgivande_att_bli_kontaktad { get; set; }
         public Nullable<int> Admin_id { get; set; }
         public Nullable<System.DateTime> Senast_andrad { get; set; }
         public Nullable<int> Order_nr { get; set; }
         public string Produkt_typ { get; set; }
         public string GDPR__Medgivande { get; set; }
         public string C30_Dagar { get; set; }
+        public Nullable<System.DateTime> Kurs_10_Månader { get; set; }
+        public Nullable<System.DateTime> Paddar_Bäst_Före { get; set; }
+        public Nullable<System.DateTime> C3år_Byta_Batteri { get; set; }
     }
 }

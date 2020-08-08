@@ -4,38 +4,41 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Alias="Self" Namespace="Database1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012">
+      <Schema Namespace="Kundregister.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="KundRegister">
           <Key>
             <PropertyRef Name="Kund_Id" />
           </Key>
-          <Property Name="Kund_Id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
-          <Property Name="Kund_Fornamn" MaxLength="50" Type="varchar" />
-          <Property Name="Kund_Efternamn" MaxLength="50" Type="varchar" />
+          <Property Name="Kund_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Kund_Fornamn" Type="varchar" MaxLength="50" />
+          <Property Name="Kund_Efternamn" Type="varchar" MaxLength="50" />
           <Property Name="Produkt_id" Type="int" />
           <Property Name="Datum_kop" Type="date" />
           <Property Name="Datum_installation" Type="date" />
-          <Property Name="Kund_telefon_nr" Type="int" />
-          <Property Name="Kund_e-mail" MaxLength="50" Type="varchar" />
-          <Property Name="Kund_adress" MaxLength="50" Type="varchar" />
+          <Property Name="Kund_telefon_nr" Type="varchar" MaxLength="20" />
+          <Property Name="Kund_e-mail" Type="varchar" MaxLength="50" />
+          <Property Name="Kund_adress" Type="varchar" MaxLength="50" />
           <Property Name="Kund_post_nr" Type="int" />
-          <Property Name="Kund_region" MaxLength="50" Type="varchar" />
-          <Property Name="Medgivande_att_bli_kontaktad" MaxLength="10" Type="varbinary" />
+          <Property Name="Kund_region" Type="varchar" MaxLength="50" />
+          <Property Name="Medgivande_att_bli_kontaktad" Type="varchar" MaxLength="5" />
           <Property Name="Admin_id" Type="int" />
           <Property Name="Senast_andrad" Type="date" />
           <Property Name="Order_nr" Type="int" />
-          <Property Name="Produkt_typ" MaxLength="50" Type="varchar" />
-          <Property Name="GDPR_ Medgivande" MaxLength="10" Type="nchar" />
-          <Property Name="30_Dagar" MaxLength="10" Type="nchar" />
+          <Property Name="Produkt_typ" Type="varchar" MaxLength="50" />
+          <Property Name="GDPR_ Medgivande" Type="nchar" MaxLength="10" />
+          <Property Name="30_Dagar" Type="nchar" MaxLength="10" />
+          <Property Name="Kurs_10_Månader" Type="date" />
+          <Property Name="Paddar_Bäst_Före" Type="date" />
+          <Property Name="3år_Byta_Batteri" Type="date" />
         </EntityType>
-        <EntityContainer Name="Database1ModelStoreContainer">
+        <EntityContainer Name="KundregisterStoreContainer">
           <EntitySet Name="KundRegister" EntityType="Self.KundRegister" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="Database1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="Kundregister" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="KundRegister">
           <Key>
             <PropertyRef Name="Kund_Id" />
@@ -46,20 +49,23 @@
           <Property Name="Produkt_id" Type="Int32" />
           <Property Name="Datum_kop" Type="DateTime" Precision="0" />
           <Property Name="Datum_installation" Type="DateTime" Precision="0" />
-          <Property Name="Kund_telefon_nr" Type="Int32" />
+          <Property Name="Kund_telefon_nr" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="Kund_e_mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Kund_adress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Kund_post_nr" Type="Int32" />
           <Property Name="Kund_region" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Medgivande_att_bli_kontaktad" Type="Binary" MaxLength="10" FixedLength="false" />
+          <Property Name="Medgivande_att_bli_kontaktad" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
           <Property Name="Admin_id" Type="Int32" />
           <Property Name="Senast_andrad" Type="DateTime" Precision="0" />
           <Property Name="Order_nr" Type="Int32" />
           <Property Name="Produkt_typ" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="GDPR__Medgivande" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="C30_Dagar" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Kurs_10_Månader" Type="DateTime" Precision="0" />
+          <Property Name="Paddar_Bäst_Före" Type="DateTime" Precision="0" />
+          <Property Name="C3år_Byta_Batteri" Type="DateTime" Precision="0" />
         </EntityType>
-        <EntityContainer Name="Database1Entities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="KundregisterV2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="KundRegisters" EntityType="Self.KundRegister" />
         </EntityContainer>
       </Schema>
@@ -67,9 +73,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Database1ModelStoreContainer" CdmEntityContainer="Database1Entities">
+        <EntityContainerMapping StorageEntityContainer="KundregisterStoreContainer" CdmEntityContainer="KundregisterV2">
           <EntitySetMapping Name="KundRegisters">
-            <EntityTypeMapping TypeName="Database1Model.KundRegister">
+            <EntityTypeMapping TypeName="Kundregister.KundRegister">
               <MappingFragment StoreEntitySet="KundRegister">
                 <ScalarProperty Name="Kund_Id" ColumnName="Kund_Id" />
                 <ScalarProperty Name="Kund_Fornamn" ColumnName="Kund_Fornamn" />
@@ -89,6 +95,9 @@
                 <ScalarProperty Name="Produkt_typ" ColumnName="Produkt_typ" />
                 <ScalarProperty Name="GDPR__Medgivande" ColumnName="GDPR_ Medgivande" />
                 <ScalarProperty Name="C30_Dagar" ColumnName="30_Dagar" />
+                <ScalarProperty Name="Kurs_10_Månader" ColumnName="Kurs_10_Månader" />
+                <ScalarProperty Name="Paddar_Bäst_Före" ColumnName="Paddar_Bäst_Före" />
+                <ScalarProperty Name="C3år_Byta_Batteri" ColumnName="3år_Byta_Batteri" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

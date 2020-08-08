@@ -12,7 +12,7 @@ namespace Alvsyssel_Kund_Register.Controllers
 {
     public class KundRegistersController : Controller
     {
-        private Database1Entities db = new Database1Entities();
+        private KundregisterV2 db = new KundregisterV2();
 
         // GET: KundRegisters
         public ActionResult Index()
@@ -46,7 +46,7 @@ namespace Alvsyssel_Kund_Register.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Kund_Id,Kund_Fornamn,Kund_Efternamn,Produkt_id,Datum_kop,Datum_installation,Kund_telefon_nr,Kund_e_mail,Kund_adress,Kund_post_nr,Kund_region,Medgivande_att_bli_kontaktad,Admin_id,Senast_andrad,Order_nr,Produkt_typ,GDPR__Medgivande,C30_Dagar")] KundRegister kundRegister)
+        public ActionResult Create([Bind(Include = "Kund_Id,Kund_Fornamn,Kund_Efternamn,Produkt_id,Datum_kop,Datum_installation,Kund_telefon_nr,Kund_e_mail,Kund_adress,Kund_post_nr,Kund_region,Medgivande_att_bli_kontaktad,Admin_id,Senast_andrad,Order_nr,Produkt_typ,GDPR__Medgivande,C30_Dagar,Kurs_10_Månader,Paddar_Bäst_Före,C3år_Byta_Batteri")] KundRegister kundRegister)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace Alvsyssel_Kund_Register.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Kund_Id,Kund_Fornamn,Kund_Efternamn,Produkt_id,Datum_kop,Datum_installation,Kund_telefon_nr,Kund_e_mail,Kund_adress,Kund_post_nr,Kund_region,Medgivande_att_bli_kontaktad,Admin_id,Senast_andrad,Order_nr,Produkt_typ,GDPR__Medgivande,C30_Dagar")] KundRegister kundRegister)
+        public ActionResult Edit([Bind(Include = "Kund_Id,Kund_Fornamn,Kund_Efternamn,Produkt_id,Datum_kop,Datum_installation,Kund_telefon_nr,Kund_e_mail,Kund_adress,Kund_post_nr,Kund_region,Medgivande_att_bli_kontaktad,Admin_id,Senast_andrad,Order_nr,Produkt_typ,GDPR__Medgivande,C30_Dagar,Kurs_10_Månader,Paddar_Bäst_Före,C3år_Byta_Batteri")] KundRegister kundRegister)
         {
             if (ModelState.IsValid)
             {
